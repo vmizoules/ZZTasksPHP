@@ -40,4 +40,5 @@ composeur = gestionnaire de dépendance de php
 
 travis :
 .travis.yml 
+testalex
 
