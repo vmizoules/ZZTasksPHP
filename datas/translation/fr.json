@@ -1,0 +1,13 @@
+{
+	"ADDTASK":"Ajouter une tâche",
+	"BADLOGIN":"Erreur d'authentification !",
+	"HOME":"Accueil",
+	"LOGIN":"Authentification",
+	"LOGOUT":"Déconnexion",
+	"REGISTER":"S'enregistrer",
+	"SIGNIN":"Se connecter",
+	"SUBTITLE":"Le meilleur gestionnaire de tâches !",
+	"USERLOGIN":"Identifiant",
+	"USERPASSWORD":"Mot de passe",
+	"WELCOME": "Bonjour"
+}

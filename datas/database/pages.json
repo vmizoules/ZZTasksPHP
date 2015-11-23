@@ -1,0 +1,7 @@
+{
+	"accueil": "pages/homepage.php",
+    "login": "pages/login.php",
+    "logout": "pages/logout.php",
+    "createTask": "pages/createTask.php",
+    "erreur": "pages/error.php"
+}
