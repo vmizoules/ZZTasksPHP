@@ -39,6 +39,18 @@
 						<i class="glyphicon glyphicon-user"></i> <?php echo _t("WELCOME") ?> <?php echo getUsername() ?>
 					</a>
 				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LanguesDispo
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<?php foreach ($app['param']['available_trans'] as $value) {
+							?>
+							<li><a href="#"><img src="img/flags/<?php echo $value ?>.png"/></a></li>
+							<?php
+						} ?>
+					</ul>
+		        </li>
 				<li>
 					<a href="<?php echo generateUrl('logout')?>">
 						<i class="glyphicon glyphicon-log-out"></i> <?php echo _t("LOGOUT") ?>
