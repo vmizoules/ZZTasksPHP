@@ -1,6 +1,8 @@
 
 # ZZTask
 
+[![Build Status](https://travis-ci.org/vmizoules/zztasks.svg)](https://travis-ci.org/vmizoules/zztasks)
+
 ## TODO
 
 ### Important :
