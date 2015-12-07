@@ -1,13 +1,19 @@
 
 # ZZTask
 
-[![Build Status](https://travis-ci.org/vmizoules/zztasks.svg)](https://travis-ci.org/vmizoules/zztasks)
+## Build status
+
+Master - [![Build Status](https://travis-ci.org/vmizoules/zztasks.svg?branch=master)](https://travis-ci.org/vmizoules/zztasks)
+
+Vince - [![Build Status](https://travis-ci.org/vmizoules/zztasks.svg?branch=vince)](https://travis-ci.org/vmizoules/zztasks)
+
+Alex - [![Build Status](https://travis-ci.org/vmizoules/zztasks.svg?branch=alex)](https://travis-ci.org/vmizoules/zztasks)
 
 ## Installation
 
 Install dependances
 
-    docker run -v $(pwd):/app composer/composer install
+    docker run --rm -v $(pwd):/app composer/composer install
 
 Launch webserver
 
