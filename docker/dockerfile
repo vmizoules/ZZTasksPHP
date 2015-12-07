@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Grafikart <contact@grafikart.fr>
+MAINTAINER Vincent & Alexandre
 
 # FIX Apache/PHP write permissions to the app
 ENV BOOT2DOCKER_ID 1000
