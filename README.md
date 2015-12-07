@@ -3,6 +3,16 @@
 
 [![Build Status](https://travis-ci.org/vmizoules/zztasks.svg)](https://travis-ci.org/vmizoules/zztasks)
 
+## Installation
+
+Install dependances
+
+    docker run -v $(pwd):/app composer/composer install
+
+Launch webserver
+
+    docker-compose up
+
 ## TODO
 
 ### Important :
