@@ -5,8 +5,13 @@
 <?php } ?>		
 		
 <form action="<?php echo generateUrl('createTask')?>" method="post">
-	Title: <input type="text" name="title"/><br/>
-	UsermakeTask: <input type="text" name="taskUser"/><br/>
-	Task: <input type="text" name="taskText"/><br/>
+	Category : <select name="category"/>
+					<option value="todo">Todo</option>
+					<option value="inprogress">In progress</option>
+					<option value="done">Done</option>
+				</select><br/>
+	Title: <input type="text" name="title" required /><br/>
+	Affected User: <input type="text" name="affectedUser" required /><br/>
+	Description: <input type="text" name="description" required /><br/>
 	<input type="submit" name="submit" />
 </form>
