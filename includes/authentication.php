@@ -1,5 +1,12 @@
 <?php
 
+function getUserList() {
+	// read global var $app
+	global $app;
+
+	return array_keys($app['users']);
+}
+
 function isConnected(){
 	$rep = false;
 	// check if connected
