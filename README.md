@@ -23,7 +23,6 @@ Launch webserver
 
 ### Important :
   * Faire toute la partie **fonctionnelle**
-  * Intégration continue avec Travis `.travis.yml`
   * Utiliser AJAX pour ne pas avoir à raffraichir la page
   * Faire un fichier `.htaccess` pour le renommage d'url
   * Soutenance
@@ -48,6 +47,4 @@ Dans taskManager
     * date de debut et de fin de la tache
   * suppression d'une tache 
 
-### Facultatif : 
-  * Spécifier les fichiers qui ne seront pas commités `gitignore`.
 
