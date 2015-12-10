@@ -1,6 +1,6 @@
 <?php
 
-function checkFields($category, $title, $owner,  $affectedUser,  $description) {
+function checkFields($category, $title, $owner, $affectedUser, $description) {
 	$ret = false;
 	// check fields not empty
 	if(strlen($title) > 0 ){
@@ -16,7 +16,7 @@ function checkFields($category, $title, $owner,  $affectedUser,  $description) {
 	return $ret;
 }
 
-function createTask ($category, $title, $owner,  $affectedUser,  $description){
+function createTask ($category, $title, $owner, $affectedUser, $description){
 	// read global var $app
 	global $app;
 	// check user permission exists
@@ -40,14 +40,16 @@ function createTask ($category, $title, $owner,  $affectedUser,  $description){
 	}
 }
 
-function updateTask ($category, $title, $owner,  $affectedUser,  $description, $id){
+function updateTask ($category, $title, $editor, $affectedUser, $description, $id){
 	// read global var $app
 	global $app;
+
 	// check user permission exists
-	if (checkUserPermission($owner, "editTask") == true){
+	if (checkUserPermission($editor, "editTask") == true){
 		//check fields
-		if(checkFields($category, $title, $owner,  $affectedUser,  $description)){
-			//add tasks in global array
+		$owner = $app['tasks'][$id]['owner']; // same as before
+		if(checkFields($category, $title, $owner, $affectedUser, $description)){
+			//update tasks in global array
 			$app['tasks'][$id] = array(
 				'category'=> $category,
 				'title' => $title,
