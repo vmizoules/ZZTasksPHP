@@ -1,5 +1,6 @@
 {
 	"accueil": "pages/homepage.php",
+	"list": "pages/listTask.php",
     "login": "pages/login.php",
     "logout": "pages/logout.php",
     "createTask": "pages/createTask.php",

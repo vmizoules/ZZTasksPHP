@@ -99,8 +99,6 @@
 			<div class="panel">
 				<div class="panel-body">
 					
-					<!--Content-->		
-					<div class="row">
-						<div class="col-md-2 col-sm-3 text-center">
+				<!--Content-->
 
 <!-- end header template -->
