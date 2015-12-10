@@ -2,6 +2,8 @@
 	"ADDTASK":"Ajouter une tâche",
 	"BADLOGIN":"Erreur d'authentification !",
 	"HOME":"Accueil",
+	"LANGUAGE": "Langue",
+	"LISTTASK":"Liste des tâches",
 	"LOGIN":"Authentification",
 	"LOGOUT":"Déconnexion",
 	"REGISTER":"S'enregistrer",

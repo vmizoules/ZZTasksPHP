@@ -29,6 +29,11 @@
 			<!-- LEFT -->
 			<ul class="nav navbar-nav">
 				<li>
+					<a href="<?php echo generateUrl('listTask')?>"><?php echo _t("LISTTASK") ?></a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav">
+				<li>
 					<a href="<?php echo generateUrl('createTask')?>"><?php echo _t("ADDTASK") ?></a>
 				</li>
 			</ul>
@@ -40,7 +45,7 @@
 					</a>
 				</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LanguesDispo
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo _t("LANGUAGE") ?>
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
