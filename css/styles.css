@@ -1,5 +1,24 @@
+/* list task */
+div h3.task-title{
+  color:#333 !important;
+}
+
+div.list-todo div.task-content {
+  border-left: solid 1px blue;
+}
+div.list-todo h3{ color:blue; }
+div.list-inprogress h3{ color:orange; }
+div.list-inprogress div.task-content {
+  border-left: solid 1px orange;
+}
+div.list-done h3{ color:green; }
+div.list-done div.task-content {
+  border-left: solid 1px green;
+}
+
+
 /* login */
-.modal-footer {   border-top: 0px; }
+.modal-footer { border-top: 0px; }
 
 #loginModal {
   background-color: #004;
