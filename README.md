@@ -23,8 +23,6 @@ Launch webserver
 
 ### Important :
   * createTask -> doit afficher erreur si pas la permission de créer tache
-  * catégorie de task : TODO, in progress, done
-  * afficher les tasks en 3 catégories, TODO, In progress, Done
   * Faire toute la partie **fonctionnelle**
   * Utiliser AJAX pour ne pas avoir à raffraichir la page
   * Faire un fichier `.htaccess` pour le renommage d'url
