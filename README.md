@@ -23,7 +23,6 @@ Launch webserver
 
 ### Important :
   * createTask -> doit afficher erreur si pas la permission de créer tache
-  * proposer en login le dernier nom d'utilisateur
   * catégorie de task : TODO, in progress, done
   * afficher les tasks en 3 catégories, TODO, In progress, Done
   * Faire toute la partie **fonctionnelle**
@@ -55,3 +54,8 @@ Dans taskManager
 
   * ajouter le code coverage dans junit xml
   * pouvoir mettre du gras souligner dans les descriptions des tasks
+
+## Done
+
+  * Affiche le nom du dernier utilisateur connecté
+  

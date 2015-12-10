@@ -18,6 +18,8 @@
     },
     "vince": {
         "password": "vince",
-        "group": "user"
+        "permissions": [
+            "listTask"
+        ]
     }
 }
