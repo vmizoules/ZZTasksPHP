@@ -70,7 +70,7 @@
 					<p class="lead"><?php echo _t("SUBTITLE") ?></p>
 				</h1>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-5 visible-md-block visible-lg-block">
 				<div class="well well-lg"> 
 					<div class="row">
 						<div class="col-sm-12">
@@ -81,7 +81,7 @@
 		</div> 
 	</div><!-- /cont -->
 	
-	<div class="container">
+	<div class="container visible-md-block visible-lg-block">
 		<div class="row">
 			<div class="col-md-12">
 				<div class="top-spacer"> </div>
