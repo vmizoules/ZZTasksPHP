@@ -31,7 +31,13 @@ function getActualRoute() {
 // redirect user to given routeName
 function redirect($routeName='') {
 	// redirect to generate url
-	header('Location:' . generateUrl($routeName) );
+	redirectUrl(generateUrl($routeName));
+}
+
+// redirect user to given routeName
+function redirectUrl($url) {
+	// redirect to generate url
+	header('Location:' . $url );
 }
 
 // generate url by routeName

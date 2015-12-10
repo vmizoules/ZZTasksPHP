@@ -46,7 +46,7 @@
 					<ul class="dropdown-menu">
 						<?php foreach ($app['param']['available_trans'] as $value) {
 							?>
-							<li><a href="#"><img src="img/flags/<?php echo $value ?>.png"/></a></li>
+							<li><a href="<?php echo generateUrl('setlang')?>&lang=<?php echo $value ?>"><img src="img/flags/<?php echo $value ?>.png"/></a></li>
 							<?php
 						} ?>
 					</ul>
