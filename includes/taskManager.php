@@ -16,5 +16,7 @@ function createTask ($owner, $titre, $taskUser, $text, array $associatedUsers){
 			);
 			saveTasks();
 		}
+	} else {
+		throw new Exception("Permission denied", 1);
 	}
 }

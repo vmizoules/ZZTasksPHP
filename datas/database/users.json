@@ -1,17 +1,23 @@
 {
-    "alex": {
-        "password": "abcd",
-		"group": "user",
+    "admin": {
+        "password": "admin",
         "permissions": [
+            "listTask",
+            "createTask",
+            "editTask",
+            "commentTask",
+            "removeTask"
+        ]
+    },
+    "alex": {
+        "password": "alex",
+        "permissions": [
+            "listTask",
             "createTask"
         ]
     },
     "vince": {
         "password": "vince",
         "group": "user"
-    },
-    "admin": {
-        "password": "admin",
-        "group": "administrator"
     }
 }

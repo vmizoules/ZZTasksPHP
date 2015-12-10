@@ -22,6 +22,10 @@ Launch webserver
 ## TODO
 
 ### Important :
+  * createTask -> doit afficher erreur si pas la permission de créer tache
+  * proposer en login le dernier nom d'utilisateur
+  * catégorie de task : TODO, in progress, done
+  * afficher les tasks en 3 catégories, TODO, In progress, Done
   * Faire toute la partie **fonctionnelle**
   * Utiliser AJAX pour ne pas avoir à raffraichir la page
   * Faire un fichier `.htaccess` pour le renommage d'url
@@ -47,4 +51,7 @@ Dans taskManager
     * date de debut et de fin de la tache
   * suppression d'une tache 
 
+## facultatif
 
+  * ajouter le code coverage dans junit xml
+  * pouvoir mettre du gras souligner dans les descriptions des tasks
