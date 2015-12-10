@@ -38,6 +38,7 @@ function redirect($routeName='') {
 function redirectUrl($url) {
 	// redirect to generate url
 	header('Location:' . $url );
+	die("Redirected");
 }
 
 // generate url by routeName
