@@ -2,6 +2,9 @@
 	<br>
 	<div class="task-content col-sm-12">
 		<h3 class="task-title"><?php echo $value["title"] ?></h3>
+		<a href="<?php echo generateUrl('updateTask').'&id='.$key ?>">edit</a>
+		<a href="<?php echo generateUrl('deleteTask').'&id='.$key ?>">delete</a>
+
 		<div class="row">
 			<div class="col-xs-9">
 				<small style="font-family:courier,'new courier';" class="text-muted"><?php echo $value["description"] ?></small>

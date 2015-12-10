@@ -22,6 +22,7 @@ Launch webserver
 ## TODO
 
 ### Important :
+  * delete renvoyer vrai ou faux
   * createTask -> doit afficher erreur si pas la permission de créer tache
   * Faire toute la partie **fonctionnelle**
   * Utiliser AJAX pour ne pas avoir à raffraichir la page
