@@ -5,8 +5,8 @@
 		<div class="row">
 			<div class="col-xs-9">
 				<small style="font-family:courier,'new courier';" class="text-muted"><?php echo $value["description"] ?></small>
-				<h4><span class="label label-default"> Affected to : <?php echo $value["affectedUser"] ?></span></h4><h4>
-				<h4><span class="label label-default"> Owner : <?php echo $value["owner"] ?></span></h4>
+				<h4><span class="label label-default"> <?php echo _t("AFFECTEDTOTASK") ?><?php echo $value["affectedUser"] ?></span></h4><h4>
+				<h4><span class="label label-default"> <?php echo _t("OWNERTASK") ?><?php echo $value["owner"] ?></span></h4>
 				</div>
 			<div class="col-xs-3"></div>
 		</div>
