@@ -8,7 +8,7 @@
 			<div class="modal-body">
 				<form class="form col-md-12 center-block" action="<?php echo generateUrl('login')?>" method="post">
 					<div class="form-group">
-						<input type="text" name="login" class="form-control input-lg" placeholder="<?php echo _t("USERLOGIN") ?>">
+						<input type="text" name="login" class="form-control input-lg" placeholder="<?php echo _t("USERLOGIN") ?>" value="<?php echo getUsername() ?>">
 					</div>
 					<div class="form-group">
 						<input type="password" name="password" class="form-control input-lg" placeholder="<?php echo _t("USERPASSWORD") ?>">
