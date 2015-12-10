@@ -1,31 +1,43 @@
 <?php 
-// read global var $app
+// allow to read global var $app
 global $app;
 ?>
-<h3>TODO</h3>
 
-<?php 
-foreach ($app['tasks'] as $key => $value) {
-	if($value["category"]=="todo") {
-		include("views/components/task.php");
-	}
-};
-?>
+<div class="row">
+	<div class="list-todo col-lg-4">
+		<h3>To do</h3>
 
-<h3>In progress</h3>
-<?php 
-foreach ($app['tasks'] as $key => $value) {
-	if($value["category"]=="inprogress") {
-		include("views/components/task.php");
-	}
-};
-?>
-<h3>Done</h3>
-<?php 
-foreach ($app['tasks'] as $key => $value) {
-	if($value["category"]=="done") {
-		include("views/components/task.php");
-	}
-};
-?>
+		<?php
+		foreach ($app['tasks'] as $key => $value) {
+			if($value["category"]=="todo") {
+				include("views/components/task.php");
+			}
+		};
+		?>
+	</div>
 
+	<div class="list-inprogress col-lg-4">
+		<h3>In progress</h3>
+
+		<?php
+		foreach ($app['tasks'] as $key => $value) {
+			if($value["category"]=="inprogress") {
+				include("views/components/task.php");
+			}
+		};
+		?>
+	</div>
+
+	<div class="list-done col-lg-4">
+		<h3>Done</h3>
+
+		<?php 
+		foreach ($app['tasks'] as $key => $value) {
+			if($value["category"]=="done") {
+				include("views/components/task.php");
+			}
+		};
+		?>
+	</div>
+
+</div>
