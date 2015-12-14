@@ -1,6 +1,6 @@
 <?php
 
-function checkFields($category, $title, $owner,  $affectedUser,  $description) {
+function checkFields($category, $title, $owner, $affectedUser, $description) {
 	$ret = false;
 	// check fields not empty
 	if(strlen($title) > 0 ){
@@ -16,7 +16,7 @@ function checkFields($category, $title, $owner,  $affectedUser,  $description) {
 	return $ret;
 }
 
-function createTask ($category, $title, $owner,  $affectedUser,  $description){
+function createTask ($category, $title, $owner, $affectedUser, $description){
 	// read global var $app
 	global $app;
 	// check user permission exists
@@ -40,14 +40,16 @@ function createTask ($category, $title, $owner,  $affectedUser,  $description){
 	}
 }
 
-function updateTask ($category, $title, $owner,  $affectedUser,  $description, $id){
+function updateTask ($category, $title, $editor, $affectedUser, $description, $id){
 	// read global var $app
 	global $app;
+
 	// check user permission exists
-	if (checkUserPermission($owner, "editTask") == true){
+	if (checkUserPermission($editor, "editTask") == true){
 		//check fields
-		if(checkFields($category, $title, $owner,  $affectedUser,  $description)){
-			//add tasks in global array
+		$owner = $app['tasks'][$id]['owner']; // same as before
+		if(checkFields($category, $title, $owner, $affectedUser, $description)){
+			//update tasks in global array
 			$app['tasks'][$id] = array(
 				'category'=> $category,
 				'title' => $title,
@@ -64,14 +66,18 @@ function updateTask ($category, $title, $owner,  $affectedUser,  $description, $
 	}
 }
 
-function deleteTask($id) {
+function deleteTask($id,$editor) {
 	// read global var $app
 	global $app;
-
-	if(array_key_exists($id, $app['tasks'])) {
-		unset($app['tasks'][$id]);
-		saveTasks();
+	// check user permission exists
+	if (checkUserPermission($editor, "removeTask") == true){
+		if(array_key_exists($id, $app['tasks'])) {
+			unset($app['tasks'][$id]);
+			saveTasks();
+		} else {
+			throw new Exception("Can't delete this task", 2);
+		}
 	} else {
-		throw new Exception("Can't delete this task", 1);
+		throw new Exception("Permission denied!", 1);
 	}
 }
