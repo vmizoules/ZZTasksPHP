@@ -15,7 +15,7 @@ $task["description"] = 'desc';
 	<label for="input-category"> <?php echo _t("CATEGORYTASKFORM") ?></label>
 	<select id="input-category" class="form-control" name="category" required />
 		<?php if(isset($task["category"])) { ?>
-			<option value="<?php echo $task["category"]; ?>" selected><?php echo $task["category"]; ?></option>
+			<option value="<?php echo $task["category"]; ?>" selected><?php echo _t($task["category"]); ?></option>
 			<option disabled></option>
 		<?php } ?>
 		<option value="todo"><?php echo _t("todo") ?></option>

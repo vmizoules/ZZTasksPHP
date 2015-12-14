@@ -1,5 +1,5 @@
 <?php
 
 if(isset($_GET['id'])) {
-	deleteTask($_GET['id'],getUsername());
+	deleteTask($_GET['id'], getUsername());
 }
