@@ -9,7 +9,7 @@ function getPhpFile($routeName='') {
 	if(array_key_exists($routeName, $app['pages'])) {
 		$file = $app['pages'][$routeName];
 	} else {
-		throw new Exception("Error processing getPhpFile($routeName)", 1);
+		throw new Exception("Error processing getPhpFile($routeName): Route not found!", 1);
 	}
 	
 	return $file;

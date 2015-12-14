@@ -3,6 +3,8 @@
 	"AFFECTEDTOTASK":"Affecté à : ",
 	"BADLOGIN":"Erreur d'authentification !",
 	"DONE":"Terminé",
+	"ERRORMESSAGE":"Une erreur est survenue ! Veuillez contacter l'administrateur.",
+	"ERRORTITLE":"Erreur",
 	"HOME":"Accueil",
 	"INPROGRESSLIST":"En cours",
 	"LANGUAGE": "Langue",

@@ -1,4 +1,5 @@
 {
+	"debug": false,
     "db_path_users": "datas/database/users.json",
     "db_path_pages": "datas/database/pages.json",
     "db_path_tasks": "datas/database/tasks.json",

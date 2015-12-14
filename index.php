@@ -8,7 +8,7 @@ if(!isset($_SESSION)) {
 include_once('includes/autoload.php');
 
 // init vars
-$app['param'] = getConfig();
+$app['param'] = getConfig("dev");
 $app['users'] = loadJson($app['param']['db_path_users']);
 $app['pages'] = loadJson($app['param']['db_path_pages']);
 $app['tasks'] = loadJson($app['param']['db_path_tasks']);

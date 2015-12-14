@@ -31,7 +31,7 @@ global $app;
 	<div class="list-done col-lg-4">
 		<h3><?php echo _t("DONE") ?></h3>
 
-		<?php 
+		<?php
 		foreach ($app['tasks'] as $key => $value) {
 			if($value["category"]=="done") {
 				include("views/components/task.php");
