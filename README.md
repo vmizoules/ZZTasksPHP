@@ -22,6 +22,8 @@ Launch webserver
 ## TODO
 
 ### Important :
+  * Ne pas afficher l'edition (bouton) d'une tache si on a pas la permission 
+  * Pareil pour la suppression de tache
   * delete renvoyer vrai ou faux
   * createTask -> doit afficher erreur si pas la permission de créer tache
   * Faire toute la partie **fonctionnelle**

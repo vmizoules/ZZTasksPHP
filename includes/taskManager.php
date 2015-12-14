@@ -66,14 +66,18 @@ function updateTask ($category, $title, $editor, $affectedUser, $description, $i
 	}
 }
 
-function deleteTask($id) {
+function deleteTask($id,$editor) {
 	// read global var $app
 	global $app;
-
-	if(array_key_exists($id, $app['tasks'])) {
-		unset($app['tasks'][$id]);
-		saveTasks();
+	// check user permission exists
+	if (checkUserPermission($editor, "removeTask") == true){
+		if(array_key_exists($id, $app['tasks'])) {
+			unset($app['tasks'][$id]);
+			saveTasks();
+		} else {
+			throw new Exception("Can't delete this task", 2);
+		}
 	} else {
-		throw new Exception("Can't delete this task", 1);
+		throw new Exception("Permission denied!", 1);
 	}
 }
