@@ -30,26 +30,11 @@ Can't create or remove task ?
 ## TODO
 
 ### Important :
-  * delete renvoyer vrai ou faux
   * createTask -> doit afficher erreur si pas la permission de créer tache
-  * Faire toute la partie **fonctionnelle**
-  * Utiliser AJAX pour ne pas avoir à raffraichir la page
   * Faire un fichier `.htaccess` pour le renommage d'url
   * Soutenance
 
-### Fonctionnelle :
-
-CRUD pour task (et user en bonus)
-
-Dans taskManager
-
-  * modification d'une tache
-    * modif de la personne designe a faire la tache 
-    * date de debut et de fin de la tache
-  
-  * suppression d'une tache 
-
-## facultatif
+### facultatif
 
   * ajouter le code coverage dans junit xml
   * pouvoir mettre du gras souligner dans les descriptions des tasks
