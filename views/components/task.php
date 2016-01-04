@@ -4,10 +4,14 @@
 		<h3 class="task-title"><?php echo $value["title"] ?></h3>
 
 		<?php if(checkUserPermission(getUsername(), 'editTask')) { // if user have edit permissions ?>
-			<a href="<?php echo generateUrl('updateTask').'&id='.$key ?>">edit</a>
+			<a href="<?php echo generateUrl('updateTask').'&id='.$key ?>">
+				<i class="glyphicon glyphicon-edit"> </i>
+			</a>
 		<?php } ?>
 		<?php if(checkUserPermission(getUsername(), 'removeTask')) { // if user have remove permissions ?>
-			<a href="<?php echo generateUrl('deleteTask').'&id='.$key ?>">delete</a>
+			<a href="<?php echo generateUrl('deleteTask').'&id='.$key ?>">
+				<i class="glyphicon glyphicon-remove-circle"> </i>
+			</a>
 		<?php } ?>
 
 		<div class="row">
