@@ -1,22 +1,27 @@
 <?php
 //given vars: $total $todo $inprogress $done
 ?>
-<div class="row text-center">
-	<div class="count-total col-lg-12">
-		<p> Nombre Total tache: <?php echo $total ?></p>
-	</div>
-</div>
 
-<div class="row text-center">
-	<div class="count-todo col-lg-4">
-		<p>Nombre de tache à faire : <?php echo $todo ?></p>
+<div class="count-stats">
+
+	<div class="row text-center">
+		<div class="count total col-lg-12 container">
+			<p> Total : <strong><?php echo $total ?></strong></p>
+		</div>
 	</div>
 
-	<div class="count-inprogress col-lg-4">
-		<p>Nombre de tache en cours : <?php echo $inprogress; ?></p>
+	<div class="row text-center">
+		<div class="count todo col-lg-4 container">
+			<p><?php echo _t("TODOLIST") ?> <strong><?php echo $todo ?></strong></p>
+		</div>
+
+		<div class="count inprogress col-lg-4 container">
+			<p><?php echo _t("INPROGRESSLIST") ?> <strong><?php echo $inprogress; ?></strong></p>
+		</div>
+
+		<div class="count done col-lg-4 container">
+			<p><?php echo _t("DONE") ?> <strong><?php echo $done; ?></strong></p>
+		</div>
 	</div>
 
-	<div class="count-done col-lg-4">
-		<p>Nombre de tache terminée : <?php echo $done; ?></p>
-	</div>
 </div>
