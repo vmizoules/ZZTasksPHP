@@ -6,7 +6,7 @@
 
 	<div class="row text-center">
 		<div class="count total col-lg-12 container">
-			<p> Total : <strong><?php echo $total ?></strong></p>
+			<p><?php echo _t("TOTAL") ?><strong><?php echo $total ?></strong></p>
 		</div>
 	</div>
 
