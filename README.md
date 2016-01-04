@@ -21,6 +21,12 @@ Launch webserver
 
     docker-compose up
 
+## Troubleshooting
+
+Can't create or remove task ?
+
+    chmod 777 data/database/*
+
 ## TODO
 
 ### Important :
