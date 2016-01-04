@@ -15,7 +15,11 @@ div.list-done h3{ color:green; }
 div.list-done div.task-content {
   border-left: solid 1px green;
 }
-
+/* homepage */
+div.count-total{  background-color: #222;}
+div.count-todo{background-color: blue;}
+div.count-inprogress{background-color: orange;}
+div.count-done{background-color: green;}
 
 /* login */
 .modal-footer { border-top: 0px; }
