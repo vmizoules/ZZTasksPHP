@@ -8,8 +8,8 @@
 				<i class="glyphicon glyphicon-edit"> </i>
 			</a>
 		<?php } ?>
-		<?php if(checkUserPermission(getUsername(), 'removeTask')) { // if user have remove permissions ?>
-			<a href="<?php echo generateUrl('deleteTask').'&id='.$key ?>">
+		<?php if(checkUserPermission(getUsername(), 'removeTask')) { // if user have remove permissions -> display the modal ?>
+			<a href="#" data-toggle="modal" data-target="#confirm-delete-<?php echo $key ?>">
 				<i class="glyphicon glyphicon-remove-circle"> </i>
 			</a>
 		<?php } ?>
@@ -27,3 +27,27 @@
 </div>
 
 <hr>
+
+<!-- Delete modal x --> 
+<div class="modal fade" id="confirm-delete-<?php echo $key ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <?php echo _t("SUPPRESSION") ?>
+            </div>
+            <div class="modal-body">
+            	<p>
+            		<?php echo _t("DELETESENTENCE") ?>
+        		</p>
+				<p>
+				  "<?php echo $value["title"] ?>" <?php echo _t("OF") ?> <strong><cite><?php echo $value["owner"] ?></cite></strong>
+				</p>
+				</blockquote>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><?php echo _t("CANCEL") ?></button>
+                <a class="btn btn-danger btn-ok" href="<?php echo generateUrl('deleteTask').'&id='.$key ?>"> <?php echo _t("DELETE") ?> </a>
+            </div>
+        </div>
+    </div>
+</div>
