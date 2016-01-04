@@ -39,8 +39,8 @@ function saveTasks() {
 	// read global var $app
 	global $app;
 
-	// convert array to pretty json string
-	$json = json_encode($app['tasks'], JSON_PRETTY_PRINT);
+	// convert array to pretty json string // use JSON_PRETTY_PRINT
+	$json = json_encode($app['tasks']);
 	$tasks = str_replace("\\/", "/", $json);
 
 	// open file and store tasks into
