@@ -69,6 +69,14 @@ div.list-done div.task-content {
 
 /* main */
 /* override bootstrap styles */
+
+/* fix menu color */
+.dropdown-menu {  background-color: #116 !important; }
+.nav > li > a:focus, .nav > li > a:hover { background-color: #004 !important;}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover { background-color: #004 !important;}
+/* fix dropdown width */
+.dropdown-menu {min-width: 10px !important; }
+
 @import url('http://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
 
 .navbar-form input, .form-inline input {
