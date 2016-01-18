@@ -1,0 +1,47 @@
+{
+    "allPermissions": {
+        "password": "allPermissions",
+        "permissions": [
+            "listTask",
+            "createTask",
+            "editTask",
+            "commentTask",
+            "removeTask"
+        ]
+    },
+    "listtaskpermission": {
+        "password": "listtaskpermission",
+        "permissions": [
+            "listTask"
+        ]
+    },
+    "createtaskpermission": {
+        "password": "createtaskpermission",
+        "permissions": [
+            "createTask"
+        ]
+    },
+    "edittaskpermission": {
+        "password": "edittaskpermission",
+        "permissions": [
+            "editTask"
+        ]
+    },
+    "commenttaskpermission": {
+        "password": "commenttaskpermission",
+        "permissions": [
+            "commentTask"
+        ]
+    },
+    "removetaskpermission": {
+        "password": "removetaskpermission",
+        "permissions": [
+            "removeTask"
+        ]
+    },
+    "nonepermissions": {
+        "password": "nonepermissions",
+        "permissions": [
+        ]
+    }
+}
