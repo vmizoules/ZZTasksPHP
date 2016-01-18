@@ -31,11 +31,13 @@ Can't create or remove task ?
 
 ### Important :
   * createTask -> doit afficher erreur si pas la permission de créer tache
-  * Faire un fichier `.htaccess` pour le renommage d'url
   * Soutenance
 
 ### facultatif
 
+  * hash sur les mots de passe
+  * empêcher d'afficher les sources, genre fichier de conf (via htaccess ou dossier web)
+  * Faire un fichier `.htaccess` pour le renommage d'url
   * ajouter le code coverage dans junit xml
   * pouvoir mettre du gras souligner dans les descriptions des tasks
   * Dans taskManager
