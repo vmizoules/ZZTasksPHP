@@ -25,7 +25,7 @@ Launch webserver
 
 Can't create or remove task ?
 
-    chmod 777 data/database/*
+    chmod 777 datas/database/*
 
 ## TODO
 
