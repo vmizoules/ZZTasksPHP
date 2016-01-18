@@ -41,17 +41,14 @@ Can't create or remove task ?
 
 ### Important :
 
+  * Documentation PDF
   * Soutenance
 
 ### facultatif
 
-  * Faire un fichier `.htaccess` pour le renommage d'url
+  * Faire un fichier `.htaccess` pour le renommage d'url (possible ?)
   * ajouter le code coverage dans junit xml
-  * pouvoir mettre du gras souligner dans les descriptions des tasks
-  * Dans taskManager
-    * creation d'une tache 
-      * la date debut de réalisation et de fin 
-      * verifier la date
+
 
 ## Done
 
