@@ -35,16 +35,20 @@ function getUsername() {
 	return $res;
 }
 
-function checkUserPassword($username, $password){
+function checkUserPassword($username, $givenPassword){
 	$rep=false;
-	if(isset($username) && isset($password)){
+	if(isset($username) && isset($givenPassword)){
 		if(checkUserExists($username)){
-			if(getPassword($username)==$password){
+			if(getPassword($username)==hashPassword($username, $givenPassword)){
 				$rep=true;
 			}
 		}
 	}
 	return $rep;
+}
+
+function hashPassword($username, $password) {
+	return md5($username . "123" . $password);
 }
 
 function checkUserExists($username){

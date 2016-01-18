@@ -21,6 +21,14 @@ Launch webserver
 
     docker-compose up
 
+## Users
+
+admin:admin
+
+alex:alex
+
+vince:vince
+
 ## Troubleshooting
 
 Can't create or remove task ?
@@ -35,7 +43,6 @@ Can't create or remove task ?
 
 ### facultatif
 
-  * hash sur les mots de passe
   * Faire un fichier `.htaccess` pour le renommage d'url
   * ajouter le code coverage dans junit xml
   * pouvoir mettre du gras souligner dans les descriptions des tasks
@@ -49,6 +56,7 @@ Can't create or remove task ?
   * Affiche le nom du dernier utilisateur connecté
   * Afficher le bouton edition d'une tache si on a la permission de le faire (idem suppression)
   * empêcher d'afficher les sources (via htaccess)
+  * hash sur les mots de passe md5(username123password)
 
 Dans taskManager
   * creation d'une tache 
