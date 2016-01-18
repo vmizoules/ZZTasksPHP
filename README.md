@@ -23,11 +23,13 @@ Launch webserver
 
 ## Users
 
-admin:admin
+Admin : (can read/write/delete)
 
-alex:alex
+    david2:david2
 
-vince:vince
+Normal user : (can read)
+
+    david:david
 
 ## Troubleshooting
 
