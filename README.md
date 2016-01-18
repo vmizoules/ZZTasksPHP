@@ -30,7 +30,7 @@ Can't create or remove task ?
 ## TODO
 
 ### Important :
-  * createTask -> doit afficher erreur si pas la permission de créer tache
+
   * Soutenance
 
 ### facultatif
