@@ -3,21 +3,21 @@
 global $app;
 
 // get id
-if(!isset($_GET['id'])) {
-	die("error"); // TODO faire un throw plus propre
+if (!isset($_GET['id'])) {
+    die("error"); // TODO faire un throw plus propre
 }
 $id = $_GET['id'];
 
 $formError = false;
 // check form is submitted
-if (isset($_POST["submit"])){
-	$formError = true;
-	// check all field given
-	if(isset($_POST["category"]) && isset($_POST["title"]) && isset($_POST["affectedUser"]) && isset($_POST["description"])){
-		$formError = false;
-		updateTask($_POST["category"], $_POST["title"], getUsername(), $_POST["affectedUser"], $_POST["description"], $id);
-		die("Ok"); // remplacer par un redirect TODO
-	}
+if (isset($_POST["submit"])) {
+    $formError = true;
+    // check all field given
+    if (isset($_POST["category"]) && isset($_POST["title"]) && isset($_POST["affectedUser"]) && isset($_POST["description"])) {
+        $formError = false;
+        updateTask($_POST["category"], $_POST["title"], getUsername(), $_POST["affectedUser"], $_POST["description"], $id);
+        die("Ok"); // remplacer par un redirect TODO
+    }
 }
 
 // fill form with task datas

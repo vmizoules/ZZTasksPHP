@@ -2,62 +2,69 @@
 
 include_once('includes/autoload.php');
 
-class translationTest extends PHPUnit_Framework_TestCase {
-	
-	// set up global app var
-	public function setUp() {
-		// init global app var
-		global $app;
-		$app['param'] = getConfig("test");
-		$app['users'] = loadJson($app['param']['db_path_users']);
-		$app['pages'] = loadJson($app['param']['db_path_pages']);
-		$app['tasks'] = loadJson($app['param']['db_path_tasks']);
+class translationTest extends PHPUnit_Framework_TestCase
+{
 
-		// init session
-		global $_SESSION;
-		$_SESSION = array();
-	}
+    // set up global app var
+    public function setUp()
+    {
+        // init global app var
+        global $app;
+        $app['param'] = getConfig("test");
+        $app['users'] = loadJson($app['param']['db_path_users']);
+        $app['pages'] = loadJson($app['param']['db_path_pages']);
+        $app['tasks'] = loadJson($app['param']['db_path_tasks']);
 
-	public function testLoadTranslation() {
-		// count there is 2 word
-		$this->assertEquals(count(loadTranslation("testLang")), 2);
-		// test word MonMot
-		$this->assertEquals(loadTranslation("testLang")["TEST_WORD"], "MonMot");
-	}
+        // init session
+        global $_SESSION;
+        $_SESSION = array();
+    }
 
-	public function testGetLang() {
-		//test get default testLang
-		$this->assertEquals(getLang(), "testLang");
-		//test with 
-		$_SESSION['lang']="sessionTestLang";
-		$this->assertEquals(getLang(), "sessionTestLang");
-	}
+    public function testLoadTranslation()
+    {
+        // count there is 2 word
+        $this->assertEquals(count(loadTranslation("testLang")), 2);
+        // test word MonMot
+        $this->assertEquals(loadTranslation("testLang")["TEST_WORD"], "MonMot");
+    }
 
-	public function testSetLang() {
-		// set default lang
-		setLang("");
-		$this->assertEquals(getLang(), "testLang");
+    public function testGetLang()
+    {
+        //test get default testLang
+        $this->assertEquals(getLang(), "testLang");
+        //test with
+        $_SESSION['lang'] = "sessionTestLang";
+        $this->assertEquals(getLang(), "sessionTestLang");
+    }
 
-		//set lang testLang2
-		setLang("testLang2");
-		$this->assertEquals(getLang(), "testLang2");
-	}
+    public function testSetLang()
+    {
+        // set default lang
+        setLang("");
+        $this->assertEquals(getLang(), "testLang");
 
-	public function testGetDefaultLang() {
-		//test get default testLang
-		$this->assertEquals(getDefaultLang(), "testLang");
-	}
+        //set lang testLang2
+        setLang("testLang2");
+        $this->assertEquals(getLang(), "testLang2");
+    }
 
-	public function test_t() {
-		// load translation
-		global $app;
-		$app['trans'] = loadTranslation("testLang");
+    public function testGetDefaultLang()
+    {
+        //test get default testLang
+        $this->assertEquals(getDefaultLang(), "testLang");
+    }
 
-		// try with good words
-		$this->assertEquals(_t("TEST_WORD"), "MonMot");
-		$this->assertEquals(_t("TEST_WORD2"), "MonMot2");
+    public function test_t()
+    {
+        // load translation
+        global $app;
+        $app['trans'] = loadTranslation("testLang");
 
-		//try with bad word
-		$this->assertEquals(_t("BadWord"), "#errorTrans:'BadWord'#");
-	}
+        // try with good words
+        $this->assertEquals(_t("TEST_WORD"), "MonMot");
+        $this->assertEquals(_t("TEST_WORD2"), "MonMot2");
+
+        //try with bad word
+        $this->assertEquals(_t("BadWord"), "#errorTrans:'BadWord'#");
+    }
 }
