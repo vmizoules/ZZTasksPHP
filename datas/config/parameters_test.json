@@ -5,9 +5,7 @@
     "db_path_tasks": "tests/datas/database/tasksTest.json",
     "db_path_trans": "tests/datas/translation/",
     "available_trans": [
-    	"fr",
-    	"en",
-    	"ita",
-        "testLang"
+        "testLang",
+        "testLang2"
     	]
 }
