@@ -2,7 +2,7 @@
 
 include_once('includes/autoload.php');
 
-class testRouting extends PHPUnit_Framework_TestCase {
+class routingTest extends PHPUnit_Framework_TestCase {
 
 	public function testGetPhpFile() {
 		// TODO

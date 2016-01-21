@@ -2,7 +2,7 @@
 
 include_once('includes/autoload.php');
 
-class testAuthentication extends PHPUnit_Framework_TestCase {
+class authenticationTest extends PHPUnit_Framework_TestCase {
 	
 	public function testIsConnected() {
 		// TODO
