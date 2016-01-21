@@ -1,0 +1,41 @@
+{
+    "admin": {
+        "password": "f5866c4a4d6014ecced47960c2e3d07f",
+        "permissions": [
+            "listTask",
+            "createTask",
+            "editTask",
+            "commentTask",
+            "removeTask"
+        ]
+    },
+    "david2": {
+        "password": "134c6b3368dba2699fd3dedfde6f8a64",
+        "permissions": [
+            "listTask",
+            "createTask",
+            "editTask",
+            "commentTask",
+            "removeTask"
+        ]
+    },
+    "david": {
+        "password": "5fdf857cb0c823154e1c8677992e1993",
+        "permissions": [
+            "listTask"
+        ]
+    },
+    "alex": {
+        "password": "3afb6acd4deed49433f647eaabbe036a",
+        "permissions": [
+            "listTask",
+            "createTask"
+        ]
+    },
+    "vince": {
+        "password": "0af53b2090faceea6a76e003ca1a7c89",
+        "permissions": [
+            "listTask"
+        ]
+    }
+}

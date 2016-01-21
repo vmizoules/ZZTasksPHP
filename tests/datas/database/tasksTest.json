@@ -1,0 +1,9 @@
+[
+   {
+      "category":"done",
+      "title":"myTestTask",
+      "owner":"user_with_allPermissions",
+      "affectedUser":"user_with_allPermissions",
+      "description":"This is test task"
+   }
+]

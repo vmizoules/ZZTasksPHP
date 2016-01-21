@@ -1,0 +1,14 @@
+{
+    "name": "vmizoules/zztasks",
+    "description": "zztasks",
+    "keywords": ["zztasks"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre et Vincent"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    }
+}

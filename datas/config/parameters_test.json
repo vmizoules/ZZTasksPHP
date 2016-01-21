@@ -1,0 +1,11 @@
+{
+	"debug": false,
+    "db_path_users": "tests/datas/database/usersTest.json",
+    "db_path_pages": "tests/datas/database/pagesTest.json",
+    "db_path_tasks": "tests/datas/database/tasksTest.json",
+    "db_path_trans": "tests/datas/translation/",
+    "available_trans": [
+        "testLang",
+        "testLang2"
+    	]
+}

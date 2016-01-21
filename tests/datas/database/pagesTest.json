@@ -1,0 +1,4 @@
+{
+	"testLoadFile_goodFile": "tests/datas/testLoadPhpFile.php",
+	"testLoadFile_badFile": "tests/datas/unknow"
+}
