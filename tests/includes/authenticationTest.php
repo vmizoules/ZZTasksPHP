@@ -31,31 +31,57 @@ class authenticationTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function testConnectUser() {
-		// TODO
+		// Not possible to test because of $_SESSION
 	}
 	
 	public function testDisconnectUser() {
-		// TODO
+		// Not possible to test because of $_SESSION
 	}
 
 	public function testGetUsername() {
-		// TODO
+		// Not possible to test because of $_SESSION
 	}
 
 	public function testCheckUserPassword(){
-		// TODO
+		// bad user and password
+		$this->assertEquals(checkUserPassword("badUser","baduser"),false);
+		// good user and password all permission
+		$this->assertEquals(checkUserPassword("user_with_allPermissions","allPermissions"),true);
 	}
 
 	public function testCheckUserExists(){
-		// TODO
+		//empty value 
+		$this->assertEquals(checkUserExists(''),false);
+		// bad value
+		$this->assertEquals(checkUserExists("baduser"),false);
+		// good value
+		$this->assertEquals(checkUserExists("user_with_allPermissions"),true);
 	}
 
 	public function testGetPassword(){
-		// TODO
+		// test some username
+		$this->assertEquals(getPassword("user_with_listtaskpermission"),"listtaskpermission");
+		$this->assertEquals(getPassword("user_with_createtaskpermission"),"createtaskpermission");
+		// last username
+		$this->assertEquals(getPassword("user_with_nonepermissions"),"nonepermissions");
+
 	}
 
 	public function testCheckUserPermission (){
-		// TODO
+		// no permission 
+		$this->assertEquals(checkUserPermission("user_with_nonepermissions","removeTask"), false);
+		
+		// permission create task
+		$this->assertEquals(checkUserPermission("user_with_createtaskpermission","createTask"), true);
+		// permission edit task
+		$this->assertEquals(checkUserPermission("user_with_edittaskpermission","editTask"), true);
+		// permission list task
+		$this->assertEquals(checkUserPermission("user_with_listtaskpermission","listTask"), true);
+		// permission comment task
+		$this->assertEquals(checkUserPermission("user_with_commenttaskpermission","commentTask"), true);
+		// permission remove task
+		$this->assertEquals(checkUserPermission("user_with_removetaskpermission","removeTask"), true);
+
 	}
 
 	public function testHashPassword (){
@@ -63,7 +89,7 @@ class authenticationTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(hashPassword('',''),'202cb962ac59075b964b07152d234b70');
 		
 		// credible value
-		$this->assertEquals(hashPassword("test","test"), '03698509376aacc7c2c4c7a8e4e77ea2');
+		$this->assertEquals(hashPassword("test","test"),'03698509376aacc7c2c4c7a8e4e77ea2');
 
 	}
 
