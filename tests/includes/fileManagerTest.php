@@ -4,6 +4,8 @@ include_once('includes/autoload.php');
 
 class fileManagerTest extends PHPUnit_Framework_TestCase {
 	
+	private $trashFile;
+
 	// set up global app var
 	public function setUp() {
 		// init global app var
@@ -13,11 +15,22 @@ class fileManagerTest extends PHPUnit_Framework_TestCase {
 		$app['pages'] = loadJson($app['param']['db_path_pages']);
 		$app['tasks'] = loadJson($app['param']['db_path_tasks']);
 		$app['trans'] = "testLang";
+
+		$this->trashFile = 'tests/datas/trash/'.microtime().'.file';
 	}
 	
 	public function testGetConfig() {
-		// TODO
+		// make sure is an array
+		$this->assertTrue(is_array(getConfig("test")));
 
+		// bad file -> expect exception ?
+		$caught = false;
+		try {
+			getConfig("unknowConf");
+		} catch (\Exception $e) {
+			$caught = true;
+		}
+		$this->assertTrue($caught);
 	}
 
 	public function testLoadJson() {
@@ -65,5 +78,32 @@ class fileManagerTest extends PHPUnit_Framework_TestCase {
 		}
 		$this->assertFalse($caught);
 		*/
+	}
+
+	public function testSaveTasks() {
+		// save in Trash (will not break our future test !)
+		global $app;
+		$app['param']['db_path_tasks'] = $this->trashFile;
+
+		// try to save
+		$caught = false;
+		try {
+			saveTasks();
+		} catch (\Exception $e) {
+			$caught = true;
+		}
+		$this->assertFalse($caught);
+
+		// try to load this file (see if json is correct)
+		$caught = false;
+		try {
+			$fileDatas = loadJson($this->trashFile);
+		} catch (\Exception $e) {
+			$caught = true;
+		}
+		$this->assertFalse($caught);
+
+		// test datas in file are good one
+		$this->assertEquals($fileDatas, $app['tasks']);
 	}
 }
