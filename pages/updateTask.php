@@ -2,9 +2,9 @@
 // read global var $app
 global $app;
 
-// get id
-if (!isset($_GET['id'])) {
-    die("error"); // TODO faire un throw plus propre
+// get id (check isset & tasks exists)
+if (!isset($_GET['id']) || !isset($app["tasks"][$_GET['id']])) {
+	throw new Exception("No id given or bad id...", 1);
 }
 $id = $_GET['id'];
 
