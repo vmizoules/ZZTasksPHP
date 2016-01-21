@@ -6,6 +6,7 @@
     "db_path_trans": "datas/translation/",
     "available_trans": [
     	"fr",
+    	"en",
     	"ita"
     	]
 }

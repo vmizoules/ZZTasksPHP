@@ -1,3 +1,42 @@
+/* general */
+div.panel-body {
+  padding: 1rem 4rem 1rem 4rem;
+}
+
+/* homepage */
+div.count-stats{
+  margin: 2rem 8rem 2rem 8rem;
+}
+div.count{
+  height: 12rem;
+  line-height: 9rem;
+  color: #EEE;
+  font-size: 3.5rem;
+  border: 0.5rem solid white;
+}
+div.count strong{
+  color: white;
+  opacity: 0.5;
+  line-height: 13rem;
+  font-size: 10rem;
+}
+div.count.total{
+  background-color: #555;
+  height: 24rem;
+}
+div.count.total strong{
+  font-size: 22rem;
+  line-height: 24rem;
+}
+div.count.todo{background-color: blue;}
+div.count.inprogress{background-color: orange;}
+div.count.done{background-color: green;}
+
+div.count.total:hover{opacity: 0.8;}
+div.count.todo:hover{opacity: 0.8;}
+div.count.inprogress:hover{opacity: 0.8;}
+div.count.done:hover{opacity: 0.8;}
+
 /* list task */
 div h3.task-title{
   color:#333 !important;
@@ -16,7 +55,6 @@ div.list-done div.task-content {
   border-left: solid 1px green;
 }
 
-
 /* login */
 .modal-footer { border-top: 0px; }
 
@@ -31,6 +69,14 @@ div.list-done div.task-content {
 
 /* main */
 /* override bootstrap styles */
+
+/* fix menu color */
+.dropdown-menu {  background-color: #116 !important; }
+.nav > li > a:focus, .nav > li > a:hover { background-color: #004 !important;}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover { background-color: #004 !important;}
+/* fix dropdown width */
+.dropdown-menu {min-width: 10px !important; }
+
 @import url('http://fonts.googleapis.com/css?family=Oswald:300,400:latin,latin-ext');
 
 .navbar-form input, .form-inline input {
