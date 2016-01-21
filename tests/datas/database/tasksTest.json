@@ -1,1 +1,9 @@
-[{"category":"done","title":"asd","owner":"admin","affectedUser":"admin","description":"sd"},{"category":"todo","title":"sdfsdf","owner":"admin","affectedUser":"admin","description":"er d'afficher les sources, genre fichier de conf (via htaccess ou dossier web) Faire un fichier .htaccess pour le renommage d'url ajouter le code coverage dans junit xml pouvoir mettre du gras soul"},{"category":"todo","title":"sdfsdf","owner":"admin","affectedUser":"admin","description":"dsfdsf"}]
+[
+   {
+      "category":"done",
+      "title":"myTestTask",
+      "owner":"user_with_allPermissions",
+      "affectedUser":"user_with_allPermissions",
+      "description":"This is test task"
+   }
+]
