@@ -1,8 +1,8 @@
 {
 	"debug": false,
-    "db_path_users": "datas/database/users.json",
-    "db_path_pages": "datas/database/pages.json",
-    "db_path_tasks": "datas/database/tasks.json",
+    "db_path_users": "datas/database-prod/users.json",
+    "db_path_pages": "datas/database-prod/pages.json",
+    "db_path_tasks": "datas/database-prod/tasks.json",
     "db_path_trans": "datas/translation/",
     "available_trans": [
     	"fr",
