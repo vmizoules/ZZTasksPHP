@@ -15,7 +15,6 @@
 					</div>
 					<div class="form-group">
 						<button class="btn btn-primary btn-lg btn-block"><?php echo _t("SIGNIN") ?></button>
-						<span class="pull-right"><a href="#"><?php echo _t("REGISTER") ?></a></span>
 					</div>
 				</form>
 			</div>
