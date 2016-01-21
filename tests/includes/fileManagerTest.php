@@ -14,7 +14,6 @@ class fileManagerTest extends PHPUnit_Framework_TestCase {
 		$app['users'] = loadJson($app['param']['db_path_users']);
 		$app['pages'] = loadJson($app['param']['db_path_pages']);
 		$app['tasks'] = loadJson($app['param']['db_path_tasks']);
-		$app['trans'] = "testLang";
 
 		$this->trashFile = 'tests/datas/trash/'.microtime().'.file';
 	}
