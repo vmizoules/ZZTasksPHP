@@ -15,7 +15,19 @@ class taskManagerTest extends PHPUnit_Framework_TestCase {
 		$app['trans'] = "testLang";
 	}
 
+	public function testCheckFields() {
+		// TODO
+	}
+
 	public function testCreateTask() {
+		// TODO
+	}
+
+	public function testUpdateTask() {
+		// TODO
+	}
+
+	public function testDeleteTask() {
 		// TODO
 	}
 }
