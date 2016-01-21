@@ -32,6 +32,23 @@ class routingTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(getActualRoute(), 'abc');
 	}
 
+	public function testRedirect() {
+		// try to redirect to bad route name -> throw exception
+		$caught = false;
+		try {
+			redirect('badroutename');
+		} catch (\Exception $e) {
+			$caught = true;
+		}
+		$this->assertTrue($caught);
+
+		// We couldn't assert the redirection works...
+    }
+
+    public function redirectUrl() {
+    	// can't test redirect header...
+    }
+
 	public function testGenerateUrl() {
 		// null value
 		$this->assertEquals(generateUrl(), 'index.php');
