@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     if (isset($_POST["category"]) && isset($_POST["title"]) && isset($_POST["affectedUser"]) && isset($_POST["description"])) {
         $formError = false;
         updateTask($_POST["category"], $_POST["title"], getUsername(), $_POST["affectedUser"], $_POST["description"], $id);
-        die("Ok"); // remplacer par un redirect TODO
+        redirect('listTask');
     }
 }
 
