@@ -13,6 +13,11 @@ class authenticationTest extends PHPUnit_Framework_TestCase {
 		$app['pages'] = loadJson($app['param']['db_path_pages']);
 		$app['tasks'] = loadJson($app['param']['db_path_tasks']);
 		$app['trans'] = "testLang";
+
+		// mock a SESSION
+		global $_SESSION;
+		$_SESSION['auth'] = false;
+		$_SESSION['username'] = "old_user";
 	}
 
 	public function testGetUserList() {
@@ -27,19 +32,50 @@ class authenticationTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function testIsConnected() {
-		// Not possible to test because of $_SESSION
+		$this->assertFalse($_SESSION['auth']);
+		$this->assertFalse(isConnected());
+
+		$_SESSION['auth'] = true;
+
+		$this->assertTrue($_SESSION['auth']);
+		$this->assertTrue(isConnected());
 	}
 
 	public function testConnectUser() {
-		// Not possible to test because of $_SESSION
+		$this->assertEquals($_SESSION['auth'], false);
+		$this->assertEquals($_SESSION['username'], 'old_user');
+		
+		// connect new user !
+		connectUser('new_user');
+
+		$this->assertEquals($_SESSION['auth'], true);
+		$this->assertEquals($_SESSION['username'], 'new_user');
 	}
 	
 	public function testDisconnectUser() {
-		// Not possible to test because of $_SESSION
+		// set user to connected !
+		$_SESSION['auth'] = true;
+		$this->assertEquals($_SESSION['auth'], true);
+		$this->assertEquals($_SESSION['username'], 'old_user');
+
+		// try to disconnect
+		disconnectUser();
+
+		// auth -> false, but username may be kept
+		$this->assertEquals($_SESSION['auth'], false);
+		$this->assertEquals($_SESSION['username'], 'old_user');
 	}
 
 	public function testGetUsername() {
-		// Not possible to test because of $_SESSION
+		// try basic
+		$this->assertEquals($_SESSION['username'], 'old_user');
+		$this->assertEquals(getUsername(), 'old_user');
+
+		unset($_SESSION['username']);
+		// try with not setted SESSION
+		$this->assertFalse(isset($_SESSION['username']));
+		$this->assertEquals(getUsername(), null);
+
 	}
 
 	public function testCheckUserPassword(){
