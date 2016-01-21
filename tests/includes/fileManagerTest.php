@@ -34,11 +34,21 @@ class fileManagerTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function testLoadJson() {
-		// bad file -> exception
+		// unexisting file -> exception
 		$datas = null;
 		$caught = false;
 		try {
-			$datas = loadJson('unknowFile');
+			$datas = loadJson('tests/datas/unknowFile');
+		} catch (\Exception $e) {
+			$caught = true;
+		}
+		$this->assertTrue($caught);
+
+		// bad file (json corrupted)
+		$datas = null;
+		$caught = false;
+		try {
+			$datas = loadJson('tests/datas/badJson.json');
 		} catch (\Exception $e) {
 			$caught = true;
 		}
@@ -47,7 +57,7 @@ class fileManagerTest extends PHPUnit_Framework_TestCase {
 		// good file -> should work
 		$caught = false;
 		try {
-			$datas = loadJson('tests/datas/test1.json');
+			$datas = loadJson('tests/datas/goodJson.json');
 		} catch (\Exception $e) {
 			$caught = true;
 		}
@@ -57,27 +67,38 @@ class fileManagerTest extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testLoadPhpFileByPageName() {
-		/*
-		// bad file -> exception
+		// -- bad route -> exception --
 		$caught = false;
 		try {
-			//loadPhpFileByPageName('unknowPage');
+			loadPhpFileByPageName('unknowPage');
 		} catch (\Exception $e) {
 			$caught = true;
 		}
 		$this->assertTrue($caught);
 
-		
-		// good routename -> should work
-		$testVar = false;
+		// -- bad file -> exception
+		$caught = false;
 		try {
-			// testLoadFile -> tests/datas/testLoadPhpFile.json
-			//loadPhpFileByPageName('testLoadFile');
+			loadPhpFileByPageName('testLoadFile_badFile');
+		} catch (\Exception $e) {
+			$caught = true;
+		}
+		$this->assertTrue($caught);
+
+		// --- good routename -> should work --
+		global $app; // use a global var to see if file is included
+		$app['testVar'] = false; // default
+
+		$caught = false;
+		try {
+			// try to load file associated to name "testLoadFile_goodFile"
+			loadPhpFileByPageName('testLoadFile_goodFile');
+			// if it works, it will overwrite $app['testVar'] -> true
 		} catch (\Exception $e) {
 			$caught = true;
 		}
 		$this->assertFalse($caught);
-		*/
+		$this->assertTrue($app['testVar']);
 	}
 
 	public function testSaveTasks() {

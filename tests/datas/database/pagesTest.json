@@ -1,11 +1,4 @@
 {
-	"accueil": "pages/homepage.php",
-	"listTask": "pages/listTask.php",
-    "login": "pages/login.php",
-    "logout": "pages/logout.php",
-    "createTask": "pages/createTask.php",
-    "deleteTask": "pages/deleteTask.php",
-    "erreur": "pages/error.php",
-    "setlang": "pages/setLang.php",
-    "updateTask": "pages/updateTask.php"
+	"testLoadFile_goodFile": "tests/datas/testLoadPhpFile.php",
+	"testLoadFile_badFile": "tests/datas/unknow"
 }
