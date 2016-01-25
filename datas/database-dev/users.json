@@ -32,6 +32,13 @@
             "createTask"
         ]
     },
+    "test": {
+        "password": "03698509376aacc7c2c4c7a8e4e77ea2",
+        "permissions": [
+            "listTask",
+            "editTask"
+        ]
+    },
     "vince": {
         "password": "0af53b2090faceea6a76e003ca1a7c89",
         "permissions": [
